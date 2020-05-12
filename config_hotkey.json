@@ -11,6 +11,6 @@
     },
     "telegram": {
         "enabled": true,
-        "token": "1161631353:AAGPVoQyWyboCAbCoPXMMPA9JU8mSx3G9tE",
-        "chat_id": "1200930675"
+        "token": "",
+        "chat_id": ""
 }
