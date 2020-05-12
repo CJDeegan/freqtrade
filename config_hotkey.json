@@ -1,0 +1,16 @@
+{
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {"enableRateLimit": true},
+        "ccxt_async_config": {
+            "enableRateLimit": true,
+            "rateLimit": 200
+    },
+    "telegram": {
+        "enabled": true,
+        "token": "1161631353:AAGPVoQyWyboCAbCoPXMMPA9JU8mSx3G9tE",
+        "chat_id": "1200930675"
+}
