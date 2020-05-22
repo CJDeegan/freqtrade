@@ -32,16 +32,16 @@ class EMA200(IStrategy):
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
-        "0": 0.50
+        "0": 0.20
     }
 
     # Optimal stoploss designed for the strategy
     # This attribute will be overridden if the config file contains "stoploss"
-    stoploss = -0.25
-    #trailing_stop = True
+    stoploss = -0.10
+    trailing_stop = True
     trailing_only_offset_is_reached = True
     trailing_stop_positive = 0.01
-    trailing_stop_positive_offset = 0.05
+    trailing_stop_positive_offset = 0.04
 
 
     # Optimal ticker interval for the strategy
