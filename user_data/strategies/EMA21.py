@@ -37,11 +37,11 @@ class EMA21(IStrategy):
 
     # Optimal stoploss designed for the strategy
     # This attribute will be overridden if the config file contains "stoploss"
-    stoploss = -0.023
+    stoploss = -0.02
     trailing_stop = True
     trailing_only_offset_is_reached = False
-    trailing_stop_positive = 0.02
-    trailing_stop_positive_offset = 0.03
+    trailing_stop_positive = 0.01
+    trailing_stop_positive_offset = 0.02
 
 
     # Optimal ticker interval for the strategy
