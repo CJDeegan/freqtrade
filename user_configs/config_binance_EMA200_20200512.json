@@ -37,16 +37,7 @@
             "enableRateLimit": true,
             "rateLimit": 200
         },
-        "pair_whitelist": [
-            "BTC/USDT",
-            "ETH/USDT",
-            "EOS/USDT",
-            "LTC/USDT",
-            "BNB/USDT",
-            "BCH/USDT",
-            "XMR/USDT"
- 
-        ],
+        "pair_whitelist": [],
         "pair_blacklist": [
             "BUSD/USDT",
             "TUSD/USDT",
@@ -58,7 +49,7 @@
     },
     "pairlists": [{
         "method": "VolumePairList",
-        "number_assets": 10,
+        "number_assets": 20,
         "sort_key": "quoteVolume",
         "refresh_period": 1800
         
@@ -80,8 +71,8 @@
     },
     "telegram": {
         "enabled": true,
-        "token": "",
-        "chat_id": ""
+        "token": "1178079975:AAH8Y6LuLtjVpaGQdmPhMsJW3u3SD6T5Nyw",
+        "chat_id": "1200930675"
     },
     "initial_state": "running",
     "forcebuy_enable": false,
