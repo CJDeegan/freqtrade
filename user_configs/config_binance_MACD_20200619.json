@@ -1,7 +1,7 @@
 {
     "max_open_trades": 20,
     "stake_currency": "USDT",
-    "stake_amount": 100,
+    "stake_amount": 20,
     "tradable_balance_ratio": 0.99,
     "fiat_display_currency": "USD",
     "ticker_interval": "1h",
@@ -42,7 +42,11 @@
             "ETH/USDT",
             "EOS/USDT",
             "BCH/USDT",
-            "LTC/USDT"
+            "LTC/USDT",
+            "ADA/USDT",
+            "XLM/USDT",
+            "IOTA/USDT",
+            "NEO/USDT"
         ],
         "pair_blacklist": [
             "BUSD/USDT",

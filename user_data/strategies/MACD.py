@@ -36,18 +36,22 @@ class MACD(IStrategy):
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi".
     minimal_roi = {
-        "0": 0.1
+        "0": 0.37724,
+        "162": 0.12466,
+        "509": 0.04419,
+        "1140": 0
+    
     }
 
     # Optimal stoploss designed for the strategy.
     # This attribute will be overridden if the config file contains "stoploss".
-    stoploss = -0.1
+    stoploss = -0.07
 
     # Trailing stoploss
     trailing_stop = True
     trailing_only_offset_is_reached = True
-    trailing_stop_positive = 0.01
-    trailing_stop_positive_offset = 0.1
+    trailing_stop_positive = 0.01131
+    trailing_stop_positive_offset = 0.08116
 
     # Optimal ticker interval for the strategy.
     ticker_interval = '1h'
@@ -193,7 +197,7 @@ class MACD(IStrategy):
         dataframe['macdhist'] = macd['macdhist']
 
         # MFI
-        dataframe['mfi'] = ta.MFI(dataframe)#, timeperiod = 14)
+        dataframe['mfi'] = ta.MFI(dataframe)
 
         # # ROC
         # dataframe['roc'] = ta.ROC(dataframe)
@@ -335,7 +339,6 @@ class MACD(IStrategy):
         dataframe.loc[
             (
                 qtpylib.crossed_above(dataframe['macd'], dataframe['macdsignal'])
-                #dataframe['macd'] > dataframe['macdsignal']
             ),
             'buy'] = 1
 
@@ -350,8 +353,7 @@ class MACD(IStrategy):
         """
         dataframe.loc[
             (
-                qtpylib.crossed_below(dataframe['mfi'], 80)
-                #dataframe['macdhist'] < dataframe['macdhist'].shift(-1)
+                qtpylib.crossed_below(dataframe['mfi'], 75)
             ),
             'sell'] = 1
         return dataframe
